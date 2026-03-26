@@ -26,10 +26,60 @@ Model Waveform
 <img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/736bef01-c500-4225-85e4-92c4e2fdf692" />
 
 Program
+clc;
+clear;
+close;
 
-Output Graph
+// Parameters
+Am = 3.7;        // Message amplitude
+Ac = 7.4;        // Carrier amplitude
+fm = 166;      // Message frequency (Hz)
+fc = 1660;     // Carrier frequency (Hz)
+fs = 16600;    // Sampling frequency (Hz)
 
-Tablular Column
+// Time vector
+t = 0:1/fs:0.05;
+
+// Message signal
+m = Am * sin(2*%pi*fm*t);
+
+// Carrier signal
+c = Ac * sin(2*%pi*fc*t);
+
+// DSB-SC modulation
+dsb_sc = m .* c;
+
+// Plotting
+subplot(3,1,1)
+plot(t, m)
+title("Message Signal")
+xlabel("Time")
+ylabel("Amplitude")
+
+subplot(3,1,2)
+plot(t, c)
+title("Carrier Signal")
+xlabel("Time")
+ylabel("Amplitude")
+
+subplot(3,1,3)
+plot(t, dsb_sc)
+title("DSB-SC Modulated Signal")
+xlabel("Time")
+ylabel("Amplitude")
+
+```
+
+
+Output Graph:
+
+![WhatsApp Image 2026-03-20 at 9 08 06 AM](https://github.com/user-attachments/assets/aca4f75c-f8e2-48d0-bf86-bc0acfffc4d0)
+
+
+Tablular Column:
+
+<img width="772" height="640" alt="image" src="https://github.com/user-attachments/assets/d73b731d-c94a-4ef4-ace3-54193533ed8a" />
+
 
 Result
 

@@ -26,6 +26,8 @@ Model Waveform
 <img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/736bef01-c500-4225-85e4-92c4e2fdf692" />
 
 Program
+
+```
 clc;
 clear;
 close;
@@ -74,7 +76,7 @@ ylabel("Amplitude")
 Output Graph:
 
 ```
-[WhatsApp Image 2026-03-20 at 9 08 06 AM](https://github.com/user-attachments/assets/b6f78059-8486-4d00-9594-b404ce65f37d)
+![WhatsApp Image 2026-03-20 at 9 08 06 AM](https://github.com/user-attachments/assets/b6f78059-8486-4d00-9594-b404ce65f37d)
 ```
 
 Tablular Column:
